@@ -71,12 +71,24 @@ public class Restaurant {
 
 
     public int checkTotalItemCost(ArrayList<String> itemName){
-       return 0;
+        int itemToBeSelected = findItemCostByItemName(itemName);
+        if(itemToBeSelected != 0){
+            return findItemCostByItemName(itemName);
+        }
+        return 0;
     }
 
 
     public int findItemCostByItemName(ArrayList<String> itemName){
-        return 0;
+        int itemCost = 0;
+        for(int i =0; i<itemName.size(); i++){
+            for(Item item : menu){
+                if(itemName.get(i) == item.getName()){
+                    itemCost = item.getPrice() + itemCost;
+                }
+            }
+        }
+        return itemCost;
     }
 
 
