@@ -69,4 +69,16 @@ public class Restaurant {
     }
 
 
+
+    public int checkTotalItemCost(ArrayList<String> itemName){
+       return 0;
+    }
+
+
+    public int findItemCostByItemName(ArrayList<String> itemName){
+        return 0;
+    }
+
+
+
 }

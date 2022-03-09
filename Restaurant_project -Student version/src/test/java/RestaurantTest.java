@@ -60,4 +60,12 @@ class RestaurantTest {
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
+
+    @Test
+    public void selecting_existing_item_from_menu_to_check_total_cost() {
+        ArrayList<String> itemName = new ArrayList<String>();
+        itemName.add("Sweet corn soup");
+        itemName.add("Vegetable lasagne");
+        assertEquals(388, restaurant.checkTotalItemCost(itemName));
+    }
 }
